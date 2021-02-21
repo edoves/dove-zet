@@ -1,0 +1,48 @@
+.services {
+  padding: 4rem 0;
+  transition: all 250ms ease;
+  background-color: #f5f5f5;
+  @include max-width-breakpoints(tablet) {
+    padding: 2rem 2rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-gap: 1rem;
+
+    @include min-width-breakpoints(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include min-width-breakpoints(laptop) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__detail {
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+
+    .icon {
+      background: radial-gradient(
+        circle,
+        rgba(172, 188, 205, 0.9),
+        rgba(43, 50, 58, 1) 35%
+      );
+      color: #fff;
+
+      width: 6rem;
+      height: 6rem;
+      margin: 0 auto;
+      border-radius: 6rem;
+      padding: 5rem;
+      display: flex;
+      @extend %flex-center;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
