@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@400;800&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $opensans;
+  color: $site-text-color;
+  box-sizing: border-box;
+  margin: 0;
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $montserrat;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+%flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-sb {
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex-se {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  margin: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  border-radius: 3rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.6rem;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+.section--header {
+  position: relative;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  @include max-width-breakpoints(tablet) {
+    padding: 0 3rem;
+  }
+
+  h2 {
+    font-family: $opensans;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  &:after {
+    content: "";
+    display: flex;
+    width: 3rem;
+    height: 0.112rem;
+    background: $primary-color;
+    margin: auto;
+  }
+}
