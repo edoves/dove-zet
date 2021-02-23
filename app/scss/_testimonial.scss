@@ -9,6 +9,7 @@
     display: flex;
     text-align: center;
     width: 400%;
+    transition: all 250ms cubic-bezier(1, 0, 0, 1);
 
     li {
       font-size: 1.6rem;
