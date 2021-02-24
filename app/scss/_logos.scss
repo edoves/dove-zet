@@ -1,0 +1,11 @@
+.logos {
+  padding: 2rem;
+  background-color: #f5f5f5;
+
+  &__list {
+    display: flex;
+    @extend %flex-sb;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+}
