@@ -1,0 +1,90 @@
+.price {
+  padding: 4rem 0;
+
+  @include max-width-breakpoints(tablet) {
+    padding: 2rem;
+  }
+
+  &__table {
+    margin: auto;
+    @extend %flex-center;
+
+    @include min-width-breakpoints(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include max-width-breakpoints(tablet) {
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__plan {
+    border: 1px solid #dddddd;
+    text-align: center;
+    flex: 1 33.33333333%;
+  }
+
+  &__block {
+    padding: 2rem 0;
+    border-bottom: 1px solid #ddd;
+
+    h3 {
+      text-transform: capitalize;
+      margin-bottom: 0;
+      span {
+        display: block;
+        font-size: 3rem;
+        margin-top: 0.352rem;
+      }
+    }
+
+    > span {
+      text-transform: uppercase;
+      font-size: 0.952rem;
+    }
+  }
+
+  &__content {
+    padding: 3rem 0;
+  }
+
+  &__list {
+    font-size: 1.6rem;
+    li {
+      line-height: 3rem;
+    }
+  }
+
+  &__btn {
+    background-color: $primary-color;
+    display: inline-block;
+    margin: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 3rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.6rem;
+    &:hover {
+      background-color: rgba(45, 55, 66, 0.86);
+    }
+  }
+
+  &__plan:nth-child(1) {
+    margin-top: 3rem;
+  }
+
+  &__plan:nth-child(2) {
+    padding: 2.752rem 0 0rem;
+    border-top: 5px solid #485563;
+
+    @include max-width-breakpoints(tablet) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__plan:nth-child(3) {
+    margin-top: 3rem;
+  }
+}
