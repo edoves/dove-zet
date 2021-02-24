@@ -1,0 +1,65 @@
+.team {
+  background-image: linear-gradient(
+      rgba(43, 50, 58, 0.7),
+      rgba(108, 115, 122, 0.7)
+    ),
+    url(/img/team/team-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 4rem 0;
+
+  color: #fff;
+
+  &__content {
+    display: grid;
+    grid-gap: 1rem;
+    color: $primary-color;
+    padding-bottom: 5rem;
+
+    @include min-width-breakpoints(mobile) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include min-width-breakpoints(laptop) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__profile {
+    font-size: 1.6rem;
+    background-color: #c9ced1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2rem;
+    width: 87%;
+    h3 {
+      text-transform: capitalize;
+      span {
+        display: block;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-around;
+    li {
+      background: #323334;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: 0.252rem;
+      line-height: 2.5rem;
+      .fa,
+      .fab {
+        color: #c6cbce;
+      }
+    }
+  }
+  &__btn {
+    text-align: center;
+  }
+}
