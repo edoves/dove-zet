@@ -1,0 +1,63 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col {
+    flex: 1 1 40rem;
+  }
+
+  &__map {
+    height: 50rem;
+  }
+
+  &__form {
+    height: 50rem;
+    color: #fff;
+    background-image: url(/img/contact_bg.jpg);
+    form {
+      width: 80%;
+      max-width: 40rem;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    line-height: 5rem;
+    > input,
+    > textarea {
+      padding: 10px 0 10px 10px;
+      background-color: transparent;
+      border: 1px solid #fff;
+      outline: none;
+      color: #fff;
+      font-size: 1.6rem;
+      width: 100%;
+      max-width: 30rem;
+    }
+
+    > label {
+      flex: 1 0 7.5rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    align-self: flex-end;
+    transition: all 250ms ease-in;
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
