@@ -4,8 +4,18 @@
 
   &__list {
     display: flex;
-    @extend %flex-sb;
     flex-wrap: wrap;
+    @extend %flex-sb;
     margin: auto;
+
+    @include max-width-breakpoints(mobile) {
+      justify-content: center;
+    }
+
+    li {
+      @include max-width-breakpoints(mobile) {
+        margin: 2rem;
+      }
+    }
   }
 }
