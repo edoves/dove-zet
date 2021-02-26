@@ -24,6 +24,7 @@
   &__hamburger {
     display: flex;
     @extend %flex-center;
+    font-size: 1.6rem;
     p {
       text-transform: uppercase;
       color: #fff;
@@ -58,7 +59,8 @@
     width: 100%;
     max-width: 50rem;
     height: 100vh;
-    z-index: l;
+    z-index: 1;
+    font-size: 1.6rem;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     // @include min-width-breakpoints(laptop) {

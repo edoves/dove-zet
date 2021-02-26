@@ -1,3 +1,18 @@
+//navmenu
+const navigation = (() => {
+  const menuOpen = document.getElementById("open");
+  const menuClose = document.getElementById("close");
+  const headerNavbar = document.querySelector(".header__navbar");
+  menuOpen.addEventListener("click", () => {
+    headerNavbar.classList.add("open");
+  });
+
+  menuClose.addEventListener("click", () => {
+    headerNavbar.classList.remove("open");
+  });
+})();
+
+// slider navigation
 const testimonialSlider = (() => {
   const testimonialSlide = document.querySelector(".testimonial__slide");
   const buttonNavContainer = document.querySelector(".testimonial__slider-nav");
@@ -18,6 +33,7 @@ const testimonialSlider = (() => {
   };
 })();
 
+// gsap animation
 const gsapAnimation = (() => {
   gsap.from(".services__detail", {
     scrollTrigger: ".services__detail",
