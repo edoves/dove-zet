@@ -17,3 +17,23 @@ const testimonialSlider = (() => {
     el.classList.add("active");
   };
 })();
+
+const gsapAnimation = (() => {
+  gsap.from(".services__detail", {
+    scrollTrigger: ".services__detail",
+    duration: 1,
+    opacity: 0,
+    delay: 0.5,
+    y: 150,
+    stagger: 0.25,
+  });
+
+  gsap.from(".team__profile", {
+    scrollTrigger: ".team__profile",
+    duration: 1,
+    opacity: 0,
+    delay: 0.5,
+    y: 150,
+    stagger: 0.25,
+  });
+})();
