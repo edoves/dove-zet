@@ -63,11 +63,12 @@
     font-size: 1.6rem;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-    // @include min-width-breakpoints(laptop) {
-    //   max-width: 50rem;
-    // }
     @include min-width-breakpoints(mobile) {
       max-width: 30rem;
+    }
+
+    @include min-width-breakpoints(laptop) {
+      max-width: 50rem;
     }
     li {
       padding: 2rem;
@@ -146,9 +147,11 @@
     .scroll-icon-container {
       cursor: pointer;
       position: relative;
+      top: -4rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      color: #fff;
       height: 4rem;
       width: 4rem;
       margin: auto;
@@ -163,9 +166,9 @@
       &::before {
         content: "";
         border-left: 1px solid #fff;
-        height: 5rem;
+        height: 10rem;
         position: absolute;
-        bottom: -5rem;
+        bottom: -10rem;
       }
     }
   }

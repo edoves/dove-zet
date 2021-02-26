@@ -12,6 +12,19 @@ const navigation = (() => {
   });
 })();
 
+// ScrollDown effect
+const scrollDownEffect = (() => {
+  const scrollDown = document.getElementById("scrollDown");
+  scrollDown.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = scrollDown.getAttribute("href");
+    scroll({
+      top: document.querySelector(href).offsetTop,
+      behavior: "smooth",
+    });
+  });
+})();
+
 // slider navigation
 const testimonialSlider = (() => {
   const testimonialSlide = document.querySelector(".testimonial__slide");
